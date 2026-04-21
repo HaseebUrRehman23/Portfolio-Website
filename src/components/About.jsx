@@ -8,6 +8,7 @@ const About = () => {
   return (
     <section className="border-b border-neutral-900 pb-4">
       <motion.h2
+        data-motion={Boolean(motion)}
         variants={fadeIn("up")}
         initial="hidden"
         whileInView="show"
@@ -31,6 +32,8 @@ const About = () => {
               className="rounded-2xl w-[230px] md:w-[280px] lg:w-[330px]"
               src={AboutImg}
               alt="About Me"
+              loading="lazy"
+              decoding="async"
             />
           </motion.div>
         </div>

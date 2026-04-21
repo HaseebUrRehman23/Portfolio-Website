@@ -1,12 +1,15 @@
 import React from 'react'
 import { HERO_CONTENT } from '../constants'
 import HeroImg from "../assets/HeroImg.png"
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { fadeIn, staggerContainer, viewport } from "../utils/motion";
 
 const Hero = () => {
+  const prefersReducedMotion = useReducedMotion()
+
   return (
     <motion.section
+      data-motion={Boolean(motion)}
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
@@ -50,10 +53,13 @@ const Hero = () => {
             <div className='flex justify-center'>
                 <motion.img
                   variants={fadeIn("left", 0.2)}
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{ y: { duration: 3.8, repeat: Infinity, ease: "easeInOut" } }}
+                  animate={prefersReducedMotion ? undefined : { y: [0, -8, 0] }}
+                  transition={prefersReducedMotion ? undefined : { y: { duration: 3.8, repeat: Infinity, ease: "easeInOut" } }}
                   src={HeroImg}
                   alt="Haseeb Ur Rehman profile"
+                  loading="eager"
+                  decoding="async"
+                  className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
                 />
             </div>
         </div>

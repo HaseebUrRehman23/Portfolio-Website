@@ -7,6 +7,7 @@ const Projects = () => {
   return (
     <section className='border-b border-neutral-900 pb-16'>
       <motion.h2
+        data-motion={Boolean(motion)}
         variants={fadeIn("up")}
         initial="hidden"
         whileInView="show"
@@ -33,6 +34,8 @@ const Projects = () => {
                 src={project.image}
                 alt={project.title}
                 className='h-40 w-full object-cover'
+                loading="lazy"
+                decoding="async"
               />
             </div>
 

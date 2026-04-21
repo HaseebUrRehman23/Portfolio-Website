@@ -7,6 +7,7 @@ const Experience = () => {
   return (
     <section className='border-b border-neutral-900 pb-4'>
       <motion.h2
+        data-motion={Boolean(motion)}
         variants={fadeIn("up")}
         initial="hidden"
         whileInView="show"

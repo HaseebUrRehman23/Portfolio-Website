@@ -9,10 +9,11 @@ import { fadeIn } from "../utils/motion";
 const Navbar = () => {
   return (
     <motion.nav
+      data-motion={Boolean(motion)}
       variants={fadeIn("down")}
       initial="hidden"
       animate="show"
-      className="mb-20 flex items-center justify-between py-6"
+      className="mb-14 flex flex-wrap items-center justify-between gap-4 py-6 sm:mb-20 sm:flex-nowrap"
     >
       <div className="flex flex-shrink-0 items-center">
         <motion.img
@@ -23,7 +24,7 @@ const Navbar = () => {
           alt="logo"
         />
       </div>
-      <div className="m-8 flex items-center justify-center gap-4 text-2xl">
+      <div className="flex items-center justify-center gap-4 text-2xl">
         <motion.a
           whileHover={{ y: -4, scale: 1.1 }}
           whileTap={{ scale: 0.95 }}

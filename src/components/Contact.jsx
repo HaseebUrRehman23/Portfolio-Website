@@ -7,6 +7,7 @@ const Contact = () => {
   return (
     <section className="py-16">
       <motion.h2
+        data-motion={Boolean(motion)}
         variants={fadeIn("up")}
         initial="hidden"
         whileInView="show"

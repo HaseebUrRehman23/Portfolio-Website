@@ -7,7 +7,7 @@ import { FaAngular } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { TbBrandCSharp } from 'react-icons/tb';
 import { FaWordpress } from "react-icons/fa"
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { fadeIn, staggerContainer, viewport, zoomIn } from "../utils/motion";
 
 const technologies = [
@@ -22,9 +22,12 @@ const technologies = [
 ];
 
 const Technologies = () => {
+  const prefersReducedMotion = useReducedMotion()
+
   return (
     <section className='border-b border-neutral-800 pb-24'>
       <motion.h2
+        data-motion={Boolean(motion)}
         variants={fadeIn("up")}
         initial="hidden"
         whileInView="show"
@@ -40,12 +43,15 @@ const Technologies = () => {
         viewport={viewport}
         className='flex flex-wrap items-center justify-center gap-5'
       >
-        {technologies.map(({ Icon, colorClass, name }, index) => (
+        {technologies.map(({ Icon, colorClass, name }, index) => {
+          const iconNode = React.createElement(Icon, { className: `text-7xl ${colorClass}` })
+
+          return (
           <motion.div
             key={name}
             variants={zoomIn(index * 0.05)}
-            animate={{ y: [0, -6, 0] }}
-            transition={{
+            animate={prefersReducedMotion ? undefined : { y: [0, -6, 0] }}
+            transition={prefersReducedMotion ? undefined : {
               y: {
                 duration: 2.6 + (index % 3) * 0.35,
                 repeat: Infinity,
@@ -72,10 +78,11 @@ const Technologies = () => {
               transition={{ duration: 0.25 }}
             />
             <motion.div whileHover={{ scale: 1.06 }}>
-              <Icon className={`text-7xl ${colorClass}`} />
+              {iconNode}
             </motion.div>
           </motion.div>
-        ))}
+          )
+        })}
       </motion.div>
     </section>
   )
