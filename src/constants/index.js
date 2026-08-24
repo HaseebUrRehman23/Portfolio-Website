@@ -6,6 +6,8 @@ import project5 from "../assets/projects/project-5.jpg";
 import project6 from "../assets/projects/project-6.png";
 import project7 from "../assets/projects/project-7.png";
 import project8 from "../assets/projects/project-8.png";
+import project9 from "../assets/projects/h-manage.png";
+import project10 from "../assets/projects/xpeed-prepaid.png";
 
 
 
@@ -15,19 +17,19 @@ export const ABOUT_TEXT = `Results-driven Full-Stack Software Engineer with a st
 
 export const EXPERIENCES = [
   {
-    year: "November 2025 - Present",
+    year: "August 2025 - Present",
     role: "Frontend Web Developer",
     company: "Sprint Digital",
     description: `Architected scalable React.js ecosystems by engineering a library of 30+ reusable components that boosted development efficiency by 25% while bridging the gap between UI/UX and engineering through precision Figma-to-code translations. Furthermore, optimized digital performance across custom WordPress deployments, achieving 100% cross-browser compatibility and a 40% improvement in average page-load speeds.`,
     technologies: ["HTML", "CSS", "JavaScript", "React.js", "Next.js", "Tailwind CSS" , "WordPess Elementor Pro"],
   },
-  {
-    year: "August 2025 - October 2025",
-    role: "WordPress Developer",
-    company: "DigiFlav LLC.",
-    description: `Spearheaded the deployment of 5+ high-performance websites using Elementor Pro, implementing advanced optimizations that reduced page load latency by 35% and significantly elevated Core Web Vitals. Additionally, engineered custom plugin integrations to automate data workflows—saving 10+ hours weekly—while ensuring flawless cross-device responsiveness and a 95% client satisfaction rate.`,
-    technologies: ["WordPess", "WordPress Elementor Pro"],
-  },
+  // {
+  //   year: "August 2025 - October 2025",
+  //   role: "WordPress Developer",
+  //   company: "DigiFlav LLC.",
+  //   description: `Spearheaded the deployment of 5+ high-performance websites using Elementor Pro, implementing advanced optimizations that reduced page load latency by 35% and significantly elevated Core Web Vitals. Additionally, engineered custom plugin integrations to automate data workflows—saving 10+ hours weekly—while ensuring flawless cross-device responsiveness and a 95% client satisfaction rate.`,
+  //   technologies: ["WordPess", "WordPress Elementor Pro"],
+  // },
   {
     year: "March 2025 - July 2025",
     role: "Full Stack Developer",
@@ -84,6 +86,22 @@ export const PROJECTS = [
       "Programmed a secure blogging engine featuring full CRUD operations for content management. Integrated Authentication & Authorization protocols to ensure only verified users can access administrative features.",
     technologies: ["ASP.NET Core 8", "Razor pages", "Identity Framework","SQL Server"],
     liveUrl: "https://github.com/HaseebUrRehman23/ASP.NET-Personal-Blog-system-",
+  },
+  {
+    title: "H-Manage",
+    image: project9,
+    description:
+      "Leveraged Cursor AI and prompt-driven vibe coding to rapidly prototype a responsive Kanban SPA, directing high-level React.js logic to focus strictly on fluid, physics-based UX.",
+    technologies: ["React.js", "React DND", "TanStack Query", "Supabase"],
+    liveUrl: "https://h-manage.altitudoquantinnovations.site/",
+  },
+  {
+    title: "Xpeed Prepaid",
+    image: project10,
+    description:
+      "Developed a full-stack web application for Xpeed Prepaid, enabling users to access prepaid services through a seamless, end-to-end platform.",
+    technologies: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Stripe"],
+    liveUrl: "https://www.xpeedprepaid.com/",
   },
   {
     title: "The Jacka",
