@@ -41,7 +41,7 @@ const Hero = () => {
                   variants={fadeIn("right", 0.6)}
                   whileHover={{ scale: 1.04, y: -2 }}
                   whileTap={{ scale: 0.97 }}
-                  href="/Haseeb's Resume.pdf"
+                  href="/Haseeb Ur Rehman's Resume.pdf"
                   download="Haseeb-Ur-Rehman-Resume.pdf"
                   className="mt-4 inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-purple-500/20 transition-all hover:shadow-purple-500/40"
                 >
